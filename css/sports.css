@@ -1,0 +1,143 @@
+.sports-hero{
+  background: var(--green);
+  color: #fff;
+  padding: 25px clamp(20px, 8vw, 120px) 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scoreline{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+  font-size: 0.64rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.sports-hero .eyebrow{
+  color: var(--lime);
+  margin-top: 45px;
+}
+
+.sports-hero h1{
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  line-height: 0.92;
+  position: relative;
+  z-index: 1;
+}
+
+.sports-hero h1 em{
+  color: var(--lime);
+}
+
+.sports-hero>p:not(.eyebrow){
+  max-width: 490px;
+  color: #e2eadf;
+}
+
+.sports-section{
+  padding: 75px clamp(20px, 8vw, 120px) 55px;
+}
+
+.sports-heading .eyebrow{
+  color: var(--green);
+}
+
+.sports-heading h2{
+  font-size: 3rem;
+}
+
+.team-panel{
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+  background: var(--white);
+  padding: 30px;
+  border: 1px solid var(--line);
+  box-shadow: 8px 8px 0 #dce5d6;
+}
+
+.team-mark {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--green);
+  overflow: hidden;
+}
+
+.team-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tag-purple{
+  color: var(--green);
+}
+
+.team-copy h3{
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.team-copy p{
+  color: var(--muted);
+  font-size: 0.86rem;
+  max-width: 650px;
+}
+
+.team-copy a{
+  color: var(--green);
+  font-size: 0.79rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 4px;
+}
+
+@media (max-width: 1000px) {
+  .team-panel{
+    grid-template-columns: 125px 1fr;
+  }
+
+  .team-mark{
+    width: 115px;
+    height: 115px;}
+
+}
+
+@media (max-width: 720px) {
+  .sports-hero{
+    padding-top: 20px;
+  }
+
+  .sports-hero h1{
+    font-size: clamp(3.8rem, 17vw, 6rem);
+  }
+
+  .scoreline{
+    font-size: 0.52rem;
+  }
+
+  .team-panel{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 23px;
+  }
+
+  .team-mark{
+    width: 90px;
+    height: 90px;}
+
+  .team-copy h3{
+    font-size: 1.65rem;
+  }
+
+}

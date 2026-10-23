@@ -1,0 +1,197 @@
+.outdoor-hero{
+  position: relative;
+  overflow: hidden;
+  padding: 70px clamp(20px, 9vw, 130px) 0;
+  background: #eeefe6;
+  min-height: 760px;
+}
+
+.outdoor-hero>.eyebrow{
+  color: var(--green);
+}
+
+.outdoor-hero h1{
+  max-width: 800px;
+  font-size: clamp(4rem, 8.7vw, 8rem);
+  position: relative;
+  z-index: 2;
+}
+
+.outdoor-hero h1 em{
+  color: var(--green);
+}
+
+.outdoor-hero>p:not(.eyebrow){
+  max-width: 470px;
+  color: var(--muted);
+  position: relative;
+  z-index: 2;
+}
+
+.outdoor-hero>.button{
+  position: relative;
+  z-index: 2;
+  margin-top: 15px;
+}
+
+.trail-stamp{
+  position: absolute;
+  right: 10%;
+  top: 72px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  transform: rotate(12deg);
+  color: var(--green);
+}
+
+.trail-stamp strong{
+  font-size: 0.66rem;
+}
+
+.outdoor-hero-image{
+  position: relative;
+  z-index: 1;
+  height: 280px;
+  margin: 60px -5vw 0;
+}
+
+.outdoor-hero-image::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(32, 43, 41, 0.27), transparent 70%);
+  pointer-events: none;
+}
+
+.outdoor-hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trail-section{
+  padding: 80px clamp(20px, 8vw, 120px) 95px;
+}
+
+.trail-heading {
+  margin-bottom: 35px;
+}
+
+.trail-heading .eyebrow {
+  color: var(--green);
+}
+
+.trail-heading h2{
+  margin: 0;
+}
+
+.trail-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.trail-card{
+  padding-bottom: 22px;
+  border-bottom: 1px solid #b8c5b4;
+}
+
+.trail-index{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.trail-index span{
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.trail-card img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.trail-card h3{
+  font-size: 1.55rem;
+  margin: 20px 0 9px;
+}
+
+.trail-card p{
+  color: var(--muted);
+  font-size: 0.82rem;
+  min-height: 70px;
+}
+
+.trail-card a{
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 4px;
+}
+
+@media (max-width: 1000px) {
+  .trail-grid{
+    gap: 15px;
+  }
+
+  .trail-card img{
+    height: 190px;
+  }
+}
+
+@media (max-width: 720px) {
+  .outdoor-hero{
+    padding-top: 55px;
+    min-height: 0;
+  }
+
+  .outdoor-hero h1{
+    font-size: clamp(3.6rem, 16vw, 5.7rem);
+  }
+
+  .trail-stamp{
+    width: 82px;
+    height: 82px;
+    top: 24px;
+    right: 20px;
+    font-size: 0.45rem;
+  }
+
+  .trail-stamp strong{
+    font-size: 0.5rem;
+  }
+
+  .outdoor-hero-image{
+    height: 220px;
+    margin-top: 40px;
+  }
+
+  .trail-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .trail-card img{
+    height: 240px;
+  }
+
+  .trail-card p{
+    min-height: 0;
+  }
+
+}
